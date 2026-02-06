@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Mascottes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Tux — De mascotte van Linux</h2>
+                <p>Het belangrijkste symbool van Linux is een pinguïn genaamd <strong>Tux</strong>. Hij verscheen in het midden van de jaren '90 toen Linus Torvalds voorstelde om een vriendelijk en herkenbaar beeld voor het systeem te creëren. Volgens de legende werd Linus geïnspireerd door pinguïns die hij in een dierentuin zag. In tegenstelling tot de strakke logo's van commerciële systemen, ziet Tux er eenvoudig, vriendelijk en een beetje grappig uit, wat de geest van de open Linux-gemeenschap goed weerspiegelt.</p>
+                <p>In de loop der tijd werd Tux niet alleen een logo, maar een deel van de open-source cultuur. Hij verschijnt vaak in games zoals SuperTux en SuperTuxKart. Hierdoor wordt Linux niet alleen geassocieerd met serieuze servers, maar ook met creativiteit, humor en vrijheid.</p>
+            </div>
+            <div class="image-placeholder">FOTO TUX</div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Mascottes van projecten</h2>
+                <p>Veel projecten in de Linux-wereld hebben hun eigen mascottes. <strong>KDE</strong> heeft een draak genaamd <strong>Konqi</strong>, die de kracht en flexibiliteit van KDE Plasma symboliseert. <strong>GNOME</strong> heeft geen klassiek personage, maar het logo van een voetafdruk is een symbool geworden voor eenvoud en minimalisme.</p>
+                <p>De mascotte van <strong>Xfce</strong> is een muis, wat de lichtheid en snelheid van deze omgeving benadrukt. <strong>Cinnamon</strong> en <strong>MATE</strong> gebruiken strakkere logo's, maar behouden een vriendelijk imago dat gericht is op gebruikerscomfort.</p>
+            </div>
+            <div class="image-placeholder red">FOTO KONQI / LOGO'S</div>
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>De rol van mascottes in de community</h2>
+                <p>Mascottes maken technische projecten menselijker en gedenkwaardiger. Ze helpen bij het vormen van een gemeenschap en een gevoel van saamhorigheid. Dankzij deze symbolen wordt Linux niet alleen gezien als een besturingssysteem, maar als een levende wereld met zijn eigen geschiedenis, humor en tradities.</p>
+            </div>
+            <div class="image-placeholder">FOTO COMMUNITY</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.section').forEach(section => { observer.observe(section); });
+    </script>
+</body>
+</html>

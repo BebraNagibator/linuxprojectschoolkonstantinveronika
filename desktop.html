@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktopomgevingen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>GNOME</h2>
+                <p>GNOME heeft een modern en minimalistisch ontwerp. Het richt zich op eenvoud en een rustige werkomgeving zonder te veel afleiding. Veel instellingen zijn bewust verborgen, zodat de gebruiker zich kan focussen op het werk.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>KDE Plasma</h2>
+                <p>KDE Plasma is een zeer aanpasbare desktopomgeving. Gebruikers kunnen bijna alles veranderen: uiterlijk, indeling en gedrag van het systeem. Het is geschikt voor mensen die maximale controle en flexibiliteit willen.</p>
+            </div>
+            <div class="image-placeholder red">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>XFCE en Cinnamon</h2>
+                <p><strong>XFCE</strong> is licht, snel en ideaal voor oudere of minder krachtige computers. <strong>Cinnamon</strong> is juist gericht op gebruiksgemak en voelt vertrouwd aan voor Windows-gebruikers. Beide zijn stabiel en praktisch voor dagelijks gebruik.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>i3wm (Window Manager)</h2>
+                <p>i3wm is een minimalistische <strong>tiling window manager</strong> die volledig met het toetsenbord wordt bediend. Vensters worden automatisch geordend zonder overlapping, wat zorgt voor een efficiënte en snelle workflow. i3wm gebruikt weinig systeembronnen en is vooral populair bij gevorderde gebruikers en programmeurs die maximale controle en productiviteit willen.</p>
+            </div>
+            <div class="image-placeholder red">FOTO</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

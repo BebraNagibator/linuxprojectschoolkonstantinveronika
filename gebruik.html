@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Informatie - Gebruik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Wat is Linux eigenlijk?</h2>
+                <p>Linux is een open-source besturingssysteem dat gebaseerd is op de Linux-kernel. Een besturingssysteem zorgt ervoor dat de computerhardware en programma’s met elkaar kunnen werken. Omdat Linux open-source is, mag iedereen de code bekijken, aanpassen en verbeteren. Daardoor wordt het systeem ontwikkeld door een wereldwijde community van programmeurs, bedrijven en vrijwilligers. Linux staat bekend om stabiliteit, veiligheid en flexibiliteit.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Linux in het dagelijks leven</h2>
+                <p>Veel mensen gebruiken Linux zonder het te beseffen. Android, het populairste mobiele besturingssysteem ter wereld, is gebaseerd op de Linux-kernel. Ook slimme apparaten zoals routers, smart-tv’s, beveiligingscamera’s en andere IoT-apparaten draaien vaak op Linux. Zelfs in auto’s, televisies en huishoudelijke apparaten wordt Linux gebruikt als onzichtbare basissoftware.</p>
+            </div>
+            <div class="image-placeholder red">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Linux op internet en in technologie</h2>
+                <p>Linux speelt een enorme rol achter de schermen van het internet. Het grootste deel van alle webservers en cloudplatformen draait op Linux, waardoor websites, sociale media en streamingdiensten kunnen werken. Daarnaast gebruiken bijna alle supercomputers ter wereld Linux vanwege de stabiliteit en prestaties. Ook in de gamewereld groeit het gebruik, bijvoorbeeld via SteamOS.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

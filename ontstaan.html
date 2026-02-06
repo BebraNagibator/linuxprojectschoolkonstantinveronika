@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontstaan van Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>De situatie eind jaren '80</h2>
+                <p>Eind jaren ’80 en begin jaren ’90 waren de meeste besturingssystemen gesloten en commercieel. Gebruikers hadden geen toegang tot de broncode en konden het systeem niet aanpassen aan hun eigen behoeften. Voor het onderwijs werd vaak <strong>Minix</strong> gebruikt, gemaakt door Andrew Tanenbaum, maar dit systeem had ernstige beperkingen en was niet bedoeld voor vrije ontwikkeling. Dit frustreerde veel studenten en enthousiastelingen.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>1991: Linus Torvalds begint</h2>
+                <p>In 1991 besloot de Finse student <strong>Linus Torvalds</strong> zijn eigen besturingssysteemkernel te maken voor x86-processors. In het begin werkte hij alleen aan het project en zag hij het puur als een hobby. Linus plaatste een bericht op een Usenet-forum en stelde de broncode openlijk beschikbaar, waarbij hij andere ontwikkelaars uitnodigde om samen te werken.</p>
+            </div>
+            <div class="image-placeholder red">FOTO</div>
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Groei en het GNU-project</h2>
+                <p>De interesse in het project groeide snel. Programmeurs van over de hele wereld begonnen verbeteringen, nieuwe functies en drivers te sturen. De Linux-kernel werd gecombineerd met de tools van het <strong>GNU-project</strong>, waardoor een volledig besturingssysteem ontstond. Dankzij de open licentie, vrije verspreiding en de actieve community werd Linux een van de belangrijkste platforms in de wereld van informatietechnologie.</p>
+            </div>
+            <div class="image-placeholder">FOTO</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.section').forEach(section => { observer.observe(section); });
+    </script>
+</body>
+</html>
