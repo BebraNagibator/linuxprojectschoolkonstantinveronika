@@ -15,25 +15,21 @@ body {
     padding: 40px 20px;
 }
 
-/* Header / Hero */
 .hero {
-    /* Путь к твоей картинке */
     background-image: linear-gradient(rgba(44, 46, 62, 0.95), rgba(44, 46, 62, 0.95)), url('images/headervorindex.png');
-    
-    background-size: cover;       /* Растянуть картинку на весь блок */
-    background-position: center;  /* Центрировать картинку */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    
     color: white;
     text-align: center;
-    padding: 0px 0;             /* Высота хедера */
+    padding: 0px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-content {
-    z-index: 2;                   /* Поднимает текст на слой выше */
+    z-index: 2;
 }
 
 .hero h1 {
@@ -46,15 +42,12 @@ body {
     font-weight: bold;
     margin-top: -170px;
     padding: 20px;
-    font-weight: bold;
     color: white;
-
-text-shadow: 
+    text-shadow: 
         -3px -3px 0 #000,  
          3px -3px 0 #000,
         -3px  3px 0 #000,
          3px  3px 0 #000,
-
         -3px  0px 0 #000,
          3px  0px 0 #000,
          0px -3px 0 #000,
@@ -62,16 +55,24 @@ text-shadow:
 }
 
 .Linux-photo {
-    display: block;    /* Выносит картинку на новую строку */
-    margin: 0 auto;    /* Центрирует */
-    max-width: 400px;  /* Ширина картинки (можешь менять) */
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
     height: auto;
     margin-top: -70px;
-    border-radius: 10px; /* По желанию: чуть скруглим углы */
+    border-radius: 10px;
 }
-/* Secties */
+
 .section {
     padding: 60px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.section.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .white {
@@ -109,7 +110,6 @@ text-shadow:
     margin-bottom: 20px;
 }
 
-/* Knoppen */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -128,7 +128,6 @@ text-shadow:
     color: white;
 }
 
-/* Foto placeholders */
 .image-placeholder {
     width: 300px;
     height: 250px;
@@ -140,14 +139,15 @@ text-shadow:
     font-size: 40px;
     font-weight: bold;
     border-radius: 10px;
-    flex-shrink: 0; /* ДОБАВЛЕНО: чтобы блок FOTO не сжимался от текста */
+    flex-shrink: 0;
 }
+
 .footer {
-    background-color: #1a1c25; /* Чуть темнее, чем основной синий */
-    color: #a0a0a0;            /* Серый текст, чтобы не отвлекал */
+    background-color: #1a1c25;
+    color: #a0a0a0;
     text-align: center;
     padding: 5px 0;
-    margin-top: 0;             /* Если хочешь, чтобы он плотно прилегал к последнему блоку */
+    margin-top: 0;
     border-top: 1px solid #3d405b;
 }
 
@@ -157,37 +157,22 @@ text-shadow:
 }
 
 .footer strong {
-    color: white;             
+    color: white;
 }
-
-.section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out; 
-}
-
-.section.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 
 .back-to-top {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
-    
     padding: 10px 20px;
-    background-color: #4a4e69; /* Цвет как у твоих кнопок */
+    background-color: #4a4e69;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    
-    /* Начальное состояние: скрыта и прозрачна */
     display: none; 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
