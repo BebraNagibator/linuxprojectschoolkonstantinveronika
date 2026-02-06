@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voor- en nadelen van Linux</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+            <span>←</span> Terug
+        </a>
+
+        <section class="section white">
+            <div class="container flex">
+                <div class="text">  
+                    <h2>Voordelen van Linux</h2>
+                    <p>Linux is een gratis besturingssysteem met open broncode. De gebruiker krijgt volledige controle over het systeem, kan de interface, componenten en het gedrag van het besturingssysteem wijzigen. Linux is stabiel, vereist zelden herstarts en werkt goed op zwakke en oude computers. Het systeem wordt breed gebruikt op servers, in programmeren, wetenschappelijke berekeningen en cloudplatforms. Ook onderscheidt Linux zich door een hoge veiligheid en een minimaal aantal schadelijke software (malware).</p>
+                </div>
+                <img src="images/advantages.png" class="image-placeholder">
+            </div>
+        </section>
+
+        <section class="section blue">
+            <div class="container flex reverse">
+                <div class="text">
+                    <h2>Nadelen van Linux</h2>
+                    <p>Niet alle programma's voor Windows werken direct in Linux. Veel professionele applicaties, vooral op het gebied van design, videobewerking en engineering, worden officieel niet ondersteund. Sommige online games met anti-cheat systemen starten niet op. Soms treden er problemen op met drivers, vooral voor videokaarten van NVIDIA en specifieke hardware. Voor gebruikers die gewend zijn aan Windows, kan Linux in de eerste fasen minder handig lijken.</p>
+                </div>
+                <img src="images/can't run valorant.png" class="image-placeholder red">
+            </div>
+        </section>
+
+        <section class="section white">
+            <div class="container flex">
+                <div class="text">
+                    <h2>Hoe Linux deze problemen oplost</h2>
+                    <p>Om Windows-programma's te draaien worden Wine, Proton, Bottles en virtuele machines gebruikt. De meeste distributies hebben grafische applicatiewinkels en software-installatieprogramma's, zoals in Ubuntu, Linux Mint en Fedora. De formaten Flatpak, Snap en AppImage maken het mogelijk om programma's te installeren zonder afhankelijk te zijn van de systeemversie. Voor commerciële software bestaan er vrije alternatieven, zoals LibreOffice, GIMP, Krita, Blender en anderen.</p>
+                </div>
+                <img src="images/solutions.png" class="image-placeholder">
+            </div>
+        </section>
+
+        <section class="section blue">
+            <div class="container flex reverse">
+                <div class="text">
+                    <h2>Bedrijven en beperkingen</h2>
+                    <p>Sommige bedrijven brengen hun producten bewust niet uit onder Linux. Microsoft beschouwde Linux aan het begin van de jaren 2000 als een bedreiging, en de directie van het bedrijf sprak zich publiekelijk negatief uit over het systeem. Adobe brengt Photoshop, Premiere Pro en andere producten niet uit onder Linux, wat het gebruik van het systeem in de professionele omgeving beperkt. NVIDIA leverde lange tijd gesloten drivers en bood zwakke ondersteuning voor Linux-graphics. Veel gamebedrijven beperken het opstarten van hun games op Linux via anti-cheat systemen, zelfs wanneer de technische mogelijkheid voor ondersteuning aanwezig is.</p>
+                </div>
+                <img src="images/nvidiafuckyou.gif" class="image-placeholder red">
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+                <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+            </div>
+        </footer>
+
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        </script>
+    </body>
+    </html>

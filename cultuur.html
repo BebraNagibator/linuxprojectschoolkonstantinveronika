@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux en Internetcultuur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>De invloed van Linux op de ontwikkeling van open-source</h2>
+                <p>Linux, gecreëerd door Linus Torvalds in 1991, werd het eerste massale voorbeeld van het feit dat een complex en volledig functioneel besturingssysteem niet door een bedrijf, maar door een gemeenschap van vrijwilligers over de hele wereld ontwikkeld kan worden. Vóór de komst van Linux bestond open-source software al, maar voornamelijk in de vorm van afzonderlijke hulpprogramma's en academische projecten. Linux toonde aan dat het model van vrije verspreiding en collectieve ontwikkeling in staat is om te concurreren met commerciële producten.</p>
+                <p>Hierna begon het ecosysteem van open-source projecten zich actief te ontwikkelen: servertechnologieën, databases, programmeertalen, browsers en ontwikkeltools. Veel moderne technologieën, waaronder webservers, cloudplatforms, containers en mobiele systemen, zijn gebouwd op Linux of maken gebruik van de componenten ervan. Als gevolg hiervan is open-source niet langer een nicheverschijnsel, maar de standaard in de industrie geworden.</p>
+            </div>
+            <img src="images/opensource_impact.png" class="image-placeholder">
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Tux als symbool en cultureel icoon</h2>
+                <p>De pinguïn Tux werd halverwege de jaren '90 de officiële mascotte van Linux en groeide in de loop der tijd uit tot een herkenbaar symbool, niet alleen voor het systeem zelf, maar voor de hele cultuur van vrije software. Zijn beeltenis wordt gebruikt in Linux-distributies, op websites, in documentatie, tijdens evenementen en in educatieve projecten.</p>
+                <p>Na verloop van tijd begon Tux te verschijnen in videogames, strips, memes en fan-art. Hij wordt gebruikt als symbool voor vrijheid, onafhankelijkheid van grote bedrijven en open technologieën. In diverse projecten is Tux een alternatief geworden voor bedrijflogo's en merken, waarmee het idee van open toegang en collectieve creativiteit wordt benadrukt.</p>
+            </div>
+            <img src="images/tux_culture.png" class="image-placeholder red">
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Linux als onderdeel van internetcultuur en memes</h2>
+                <p>Met de tijd is Linux buiten de puur technische gemeenschap getreden en onderdeel geworden van de internetcultuur. Op het net verschenen grappen over distributies, de opdrachtregel (terminal), discussies tussen gebruikers van verschillende systemen, evenals ironische beelden van "Linux-gebruikers" als enthousiastelingen die de voorkeur geven aan complexe maar flexibele oplossingen.</p>
+                <p>Een speciale plaats wordt ingenomen door absurde complottheorieën, waarin Linus Torvalds wordt afgeschilderd als een geheim agent, een androïde of een lid van geheime organisaties, en Linux zelf als een mondiaal controleproject. Deze ideeën worden niet serieus genomen en worden voornamelijk gebruikt als een vorm van satire en internethumor die de menselijke neiging tot complotdenken op de hak neemt. Zo is Linux niet alleen een technisch platform geworden, maar ook een object van culturele en mediale herinterpretatie.</p>
+            </div>
+            <img src="images/linux_memes.png" class="image-placeholder">
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Ongebruikelijke persoonlijkheden: Terry Davis</h2>
+                <p>Een van de meest ongebruikelijke figuren verbonden aan de wereld van Linux en programmeren was Terry Davis, een Amerikaanse programmeur die zijn eigen besturingssysteem genaamd <strong>TempleOS</strong> creëerde. Hoewel TempleOS niet direct op Linux is gebaseerd, werd het gebouwd als alternatief voor moderne besturingssystemen en werd het onderdeel van de brede cultuur rond onafhankelijke softwareontwikkeling.</p>
+                <p>Davis beweerde dat hij TempleOS had gemaakt om met God te communiceren en beschouwde het als een religieus project. Het systeem had een uniek ontwerp, een eigen programmeertaal en een onconventionele architectuur. Ondanks de onstabiele mentale toestand van de auteur trok TempleOS de aandacht van programmeurs als een voorbeeld van een individuele, volledig onafhankelijke ontwikkeling van een complex systeem door één persoon. De geschiedenis van Terry Davis is onderdeel geworden van de internetcultuur en discussies over de grens tussen genialiteit, isolatie en geestelijke gezondheid binnen de technische gemeenschap.</p>
+            </div>
+            <img src="images/templeos_terry.png" class="image-placeholder red">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

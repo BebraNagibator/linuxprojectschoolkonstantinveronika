@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De groei van Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="index.html" class="back-to-top show" style="text-decoration: none; text-align: center;">
+        <span>←</span> Terug
+    </a>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Groeiende populariteit van Linux in de afgelopen jaren</h2>
+                <p>Linux vertoont voor het eerst in lange tijd een merkbare groei in gebruik, vooral op consumentenapparaten en in het gamesegment. Volgens gegevens van de Steam Hardware & Software Survey bereikte het aandeel van Linux onder Steam-gebruikers ongeveer 3,2% in november 2025, wat een nieuw record is volgens de gegevens van het platform. Dit cijfer is aanzienlijk hoger dan enkele jaren geleden, toen het aandeel van Linux op Steam rond de 1-2% lag en lange tijd stabiel onder de 3% bleef.</p>
+                <p>Afzonderlijke statistieken geven aan dat de groei van het Linux-aandeel op de desktop in het algemeen ook merkbaar is: volgens wereldwijde gegevens voor 2025 wordt het desktop-aandeel van Linux geschat op ongeveer 4,7%, wat 70% hoger is dan de vergelijkbare cijfers van 2022. Dergelijke gegevens weerspiegelen een bredere trend van toenemende Linux-gebruikers, niet alleen in het gamesegment, maar ook onder gewone desktopapparaten.</p>
+            </div>
+            <img src="images/growth_stats.png" class="image-placeholder">
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Oorzaken van groei: hardware en softwareondersteuning</h2>
+                <p>Een van de belangrijkste factoren voor de groei is de populariteit van de <strong>Steam Deck</strong> — een draagbare spelcomputer van Valve die werkt op basis van het Linux-systeem SteamOS. De Steam Deck heeft het aantal mensen dat Linux gebruikt aanzienlijk vergroot, aangezien het apparaat wordt geleverd met een voorgeïnstalleerde Linux-omgeving en van de gebruiker geen onafhankelijke systeeminstallatie vereist. Volgens analytische rapporten heeft SteamOS nu een aanzienlijk aandeel onder de Linux-installaties op Steam, en is de Steam Deck zelf de belangrijkste motor achter de groei van Linux-gaming.</p>
+                <p>Een ander belangrijk element is de compatibiliteit van games. De <strong>Proton-technologie</strong> van Valve maakt het mogelijk om de meeste Windows-games op Linux te draaien, wat het platform levensvatbaarder maakt voor spelers. Sommige rapporten merken op dat dankzij Proton en gerelateerde projecten bijna 90% van de Windows-games op Linux kan draaien, hoewel de mate van compatibiliteit nog steeds varieert.</p>
+            </div>
+            <img src="images/steam_deck.png" class="image-placeholder red">
+        </div>
+    </section>
+
+    <section class="section white">
+        <div class="container flex">
+            <div class="text">
+                <h2>Veranderingen in het ecosysteem en de invloed van Windows 10</h2>
+                <p>Trends in de groei van Linux houden ook verband met veranderingen in het Windows-ecosysteem. In 2025 eindigde de officiële ondersteuning voor <strong>Windows 10</strong>, wat een deel van de gebruikers ertoe aanzette om naar alternatieve besturingssystemen te zoeken. Steam-gegevens tonen een gelijktijdige groei van het aandeel van Windows 11 en een lichte toename van het aandeel van Linux, wat kan wijzen op een gedeeltelijke overstap van gebruikers naar Linux tijdens de periode van updates en platformwisselingen.</p>
+            </div>
+            <img src="images/windows_end.png" class="image-placeholder">
+        </div>
+    </section>
+
+    <section class="section blue">
+        <div class="container flex reverse">
+            <div class="text">
+                <h2>Groeidynamiek en conclusie</h2>
+                <p>De groei van het Linux-aandeel is niet alleen merkbaar in absolute percentages, maar ook in de dynamiek van de trend. In de afgelopen jaren heeft Linux geleidelijk zijn aandeel op het Steam-platform vergroot, stijgend van minder dan 2% naar meer dan 3% in de periode 2024-2025. Hoewel dit groeitempo niet hoog is in vergelijking met Windows, weerspiegelt het een gestage trend naar een toenemende interesse in Linux onder specifieke gebruikersgroepen.</p>
+                <p>Op de wereldwijde desktopmarkt vertoont Linux ook groei, wat aangeeft dat de interesse in alternatieve besturingssystemen niet alleen toeneemt in de game-omgeving, maar ook onder een breed scala aan gebruikers. Linux laat een stabiele groeitrend zien, versterkt door veranderingen in het Windows-ecosysteem en verbeterde compatibiliteit. De gegevens wijzen erop dat Linux geleidelijk zijn aandeel vergroot, zowel in het gaming-segment als op mondiaal niveau.</p>
+            </div>
+            <img src="images/conclusion_growth.png" class="image-placeholder red">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linux Informatie Project. Alle rechten voorbehouden.</p>
+            <p>Gemaakt door: <strong>Konstantin Skriebtsov</strong> & <strong>Veronika Schuka</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
